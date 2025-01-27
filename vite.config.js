@@ -1,8 +1,16 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+// import { defineConfig } from 'vite'
+// import react from '@vitejs/plugin-react'
 
-// https://vitejs.dev/config/
+// // https://vitejs.dev/config/
+// export default defineConfig({
+//   base: "/shoppingreact",
+//   plugins: [react()],
+// })
+
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+
 export default defineConfig({
-  base: "/shoppingreact",
   plugins: [react()],
-})
+  base: '/', // Set base to '/' for root domain or adjust if deployed at a subpath
+});
