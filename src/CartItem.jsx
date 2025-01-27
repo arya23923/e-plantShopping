@@ -16,7 +16,9 @@ const CartItem = ({ onContinueShopping }) => {
   };
 
   const handleContinueShopping = (e) => {
-    
+    dispatch(
+      setShowCart(false)
+    )
   };
 
 
@@ -25,7 +27,7 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch(
       updateQuantity({
         name: item.name,
-        quantity: item.quantity + 1,
+        quantity: item.quantity++,
       })
     )
   };
@@ -34,7 +36,7 @@ const CartItem = ({ onContinueShopping }) => {
     dispatch(
       updateQuantity({
         name: item.name,
-        quantity: item.quantity - 1,
+        quantity: item.quantity--,
       })
     )
   };
